@@ -1,0 +1,28 @@
+﻿@model IEnumerable<SliderDetail>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Areas/AdminArea/Views/Shared/_AdminLayout.cshtml";
+}
+
+<table class="container my-3 mx-3 w-75 h-50 table table-dark">
+    <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">First</th>
+            <th scope="col">Last</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <th scope="row">1</th>
+                <td>@Html.Raw(item.Header)</td>
+                <td>@item.Description</td>
+            </tr>
+        }
+        
+        
+    </tbody>
+</table>
+
